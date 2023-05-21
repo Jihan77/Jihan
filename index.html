@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <button id="decrementBtn">-</button>
+        <h2 id="numberElement">0</h2>
+        <button id="incrementBtn">+</button>
+
+
+    </div>
+
+
+    <Script>
+        const decrementBtn = document.getElementById("decrementBtn")
+        const numberElement = document.getElementById("numberElement")
+        const incrementBtn = document.getElementById("incrementBtn")
+
+        let number = 0;
+
+        function decrement(){
+            number --;
+            NumberElement.innerText = number;
+            if(number<=0){
+            decrementBtn.disable = true;
+
+            }
+            else {
+                decrementBtn.disable = false;
+            }
+
+
+
+           }
+           function increment(){
+            number ++;
+            numberElement.innerText = number;
+            if (number<=0){
+                decrementBtn.disable = true;
+            }
+            else{
+                decrementBtn.disable = false;
+
+            }
+           }
+
+           decrementBtn.addEventListener("click",decrement);
+           increment.addEventListener("click",increment);
+
+
+
+
+    </Script>
+
+
+</body>
+</html>
